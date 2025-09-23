@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Boy Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🚴 Delivery Boy Panel</h2>
+
+    <!-- Simple login (demo only, no backend) -->
+    <div id="loginSection">
+      <input type="text" id="username" placeholder="Enter Username">
+      <input type="password" id="password" placeholder="Enter Password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="deliverySection" style="display:none;">
+      <p>Order is currently <b>Out for Delivery</b>.</p>
+      <button onclick="markDelivered()">Mark as Delivered ✅</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "@boy1" && pass === "1234") {
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("deliverySection").style.display = "block";
+      } else {
+        alert("Invalid credentials!");
+      }
+    }
+
+    function markDelivered() {
+      localStorage.setItem("orderDelivered", "true"); // ✅ save status
+      alert("✅ Order marked as Delivered!");
+    }
+  </script>
+</body>
+</html>

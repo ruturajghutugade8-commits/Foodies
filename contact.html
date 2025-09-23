@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Foody Go</title>
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+  <header>
+    <h1>Foody Go</h1>
+    <nav>
+      <a href="about.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2><strong>Contact Us</strong></h2>
+    <p>We’d love to hear from you! Reach out to us for support, feedback, or partnerships.</p>
+
+    <h3>Email</h3>
+    <p>support@foodygo.com</p>
+
+    <h3>Phone</h3>
+    <p>+91 12345 67890</p>
+
+    <h3>Address</h3>
+    <p>Foody Go HQ, 123 Food Street, Your City, India</p>
+
+    <h3>Follow Us</h3>
+    <span style="display: flex; gap: 65px;">
+           <img src="file:///C:/Users/Ruturaj/OneDrive/Pictures/facebook.svg" alt="Facebook" width="20" height="20"> <img src="file:///C:/Users/Ruturaj/OneDrive/Pictures/instagram.svg" alt="Facebook" width="20" height="20"> <img src="file:///C:/Users/Ruturaj/OneDrive/Pictures/Twitter.svg" alt="Twitter" width="20" height="20"> </span>
+           Facebook | Instagram | Twitter 
+    <h3>Send a Message</h3>
+    <form id="contactForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Foody Go. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent page reload
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+
+      console.log(`${name}, your message "${message}" has been stored.`);
+      alert(`${name}, your ${message} has been sent successfully!`);
+      
+      form.reset(); // clear the form
+    });
+  </script>
+</body>
+</html>

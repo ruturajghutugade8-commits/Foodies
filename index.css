@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+header {
+  background: #d22d64;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+header nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu {
+  padding: 20px;
+}
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.food-card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.food-card:hover {
+  transform: scale(1.05);
+}
+.food-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.food-card button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.food-card button:hover {
+  background: #e64a19;
+}
+.hidden {
+  display: none;
+}

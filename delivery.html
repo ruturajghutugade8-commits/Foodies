@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="delivery-container">
+    <h2>🚴 Your Order is on the Way</h2>
+
+    <!-- Progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="circle active">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+    </div>
+
+    <!-- Status messages -->
+    <div class="status">
+      <p id="statusText">Order Accepted</p>
+    </div>
+
+    <!-- Delivery boy animation -->
+    <div class="bike">🚴‍♂️</div>
+
+    <p style="margin-top:20px; font-size:14px; color:#666;">
+      <button class="note" onclick="window.location.href='delivery-boy.html'"> Boy will confirm when your order is delivered.</button>
+    </p>
+  </div>
+
+  <script>
+    const circles = document.querySelectorAll(".circle");
+    const progress = document.getElementById("progress");
+    const statusText = document.getElementById("statusText");
+
+    const steps = ["Order Accepted","Food is Being Prepared","Out for Delivery","Delivered ✅"];
+    let currentStep = 0;
+
+    function updateStep() {
+      if (currentStep < steps.length - 1) {
+        circles[currentStep].classList.add("active");
+
+        if (currentStep > 0) {
+          circles[currentStep - 1].classList.remove("active");
+          circles[currentStep - 1].classList.add("done");
+        }
+
+        progress.style.width = `${(currentStep / (circles.length - 1)) * 100}%`;
+        statusText.textContent = steps[currentStep];
+
+        currentStep++;
+        setTimeout(updateStep, 3000);
+      }
+    }
+
+    updateStep();
+
+    // 🔑 Check localStorage for delivery status
+    function checkDeliveryStatus() {
+      if (localStorage.getItem("orderDelivered") === "true") {
+        circles.forEach(c => c.classList.remove("active"));
+        circles.forEach(c => c.classList.add("done"));
+        progress.style.width = "100%";
+        statusText.textContent = "Delivered ✅";
+      }
+    }
+
+    // Check every 2 seconds
+    setInterval(checkDeliveryStatus, 2000);
+  </script>
+</body>
+</html>

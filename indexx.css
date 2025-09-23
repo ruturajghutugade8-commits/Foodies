@@ -1,0 +1,124 @@
+/* ===========================
+   Reset & Base Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+/* ===========================
+   Navigation Bar
+=========================== */
+nav {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4d4d;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4); /* overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+.transparent-button {
+    background: transparent;      /* Transparent background */
+    color: #5bb7e1;              /* Text color */
+    border: 2px solid #100c0c;   /* Border matching text */
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 8px;
+    margin: 0 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.transparent-button:hover {
+    background: #eb9b10;          /* Fill color on hover */
+    color: #000000;                  /* Text turns white */
+    transform: scale(1.05);       /* Slight zoom effect */
+}
+
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .hero-buttons button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}

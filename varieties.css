@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff6f61, #ff9068);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Menu List */
+.menu-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 2rem;
+}
+
+.item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.item h2 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.item p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e53935;
+}
+
+/* Footer / Back Links */
+footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.back {
+  background: #555;
+}
+
+.back:hover {
+  background: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e53935;
+  padding: 2px 4px; /* optional: add small padding around text */
+  border-radius: 4px; /* optional: rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+}
+

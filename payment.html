@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <header>
+    <h1>💰 Cash on Delivery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section class="payment-box">
+    <h2 id="productName"></h2>
+    <p id="productPrice"></p>
+    <form onsubmit="makePayment(event)">
+      <label>Full Name:</label>
+      <input type="text" required>
+
+      <label>Street Address:</label>
+      <input type="text" required>
+
+      <div class="address-group">
+        <div>
+          <label>City:</label>
+          <input type="text" required>
+        </div>
+        <div>
+          <label>State:</label>
+          <input type="text" value="Maharashtra" readonly>
+        </div>
+      </div>
+
+      <label>PIN Code:</label>
+      <input type="text" required maxlength="6">
+
+      <label>Phone:</label>
+      <input type="text" required maxlength="10">
+
+      <button type="submit">Confirm Order (COD)</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

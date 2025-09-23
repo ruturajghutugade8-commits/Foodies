@@ -1,0 +1,118 @@
+/* Admin Panel Table Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(90deg, #7c0cb9, #600f7c);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffeb3b;
+}
+
+.admin-box {
+  margin: 30px auto;
+  max-width: 1000px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.admin-box h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  background: linear-gradient(90deg, #3a1a2e, #1e145c);
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+tr:hover {
+  background-color: #e0f7fa;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.status-btn {
+  background: linear-gradient(45deg, #2196f3, #64b5f6);
+  color: white;
+}
+
+.status-btn:hover {
+  background: linear-gradient(45deg, #1976d2, #42a5f5);
+}
+
+.delete-btn {
+  background: linear-gradient(45deg, #f44336, #e57373);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(45deg, #d32f2f, #ef5350);
+}
+
+.undo-btn {
+  background: linear-gradient(45deg, #ff9800, #ffb74d);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.undo-btn:hover {
+  background: linear-gradient(45deg, #f57c00, #ffa726);
+}
